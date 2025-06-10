@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bff05o0yslujt"]
+
+[ext_resource type="Texture2D" uid="uid://cby64gybssj5o" path="res://star.png" id="1_46ao5"]
+[ext_resource type="Script" uid="uid://6xivue6wogxo" path="res://star.gd" id="1_e2x7v"]
+[ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://characters/ground_shadow.png" id="3_c2gop"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e2x7v"]
+radius = 71.1126
+
+[node name="Star" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_e2x7v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e2x7v")
+
+[node name="GroundShadow" type="Sprite2D" parent="."]
+modulate = Color(0.756, 0.7872, 0.9, 1)
+position = Vector2(0, 38)
+scale = Vector2(0.809524, 0.730769)
+texture = ExtResource("3_c2gop")
+
+[node name="Star" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_46ao5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
