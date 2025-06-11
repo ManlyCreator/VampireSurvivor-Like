@@ -1,5 +1,6 @@
-res://slime.tscn
 res://survivors_game.tscn
+res://slime.gd
+res://slime.tscn
 res://tree.tscn
 res://player.tscn
 res://characters/happy_boo/happy_boo.tscn
@@ -7,6 +8,4 @@ res://smoke_explosion/smoke_explosion.tscn
 res://gun.tscn
 res://star.tscn
 res://survivors_game.gd
-res://star.gd
-res://player.gd
-res://slime.gd
+res://bullet.gd

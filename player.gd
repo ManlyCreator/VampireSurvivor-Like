@@ -8,7 +8,6 @@ const DAMAGE_RATE = 10.0
 @export var speed: float = 500.0
 @export var health: float = 100.0
 
-# TODO: Cap enemy spawns to a certain amount
 # TODO: Impulse on enemy when shot (backwards acceleration)
 # TODO: Add an extra gun on each level up
 

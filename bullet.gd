@@ -5,10 +5,11 @@ extends Area2D
 @export var maxDistance: float = 1200.0
 
 var travelledDistance: float = 0
+var dir: Vector2
 
 
 func _physics_process(delta: float) -> void:
-	var dir: Vector2 = Vector2.RIGHT.rotated(rotation)
+	dir = Vector2.RIGHT.rotated(rotation)
 	
 	position += dir * speed * delta
 	travelledDistance += speed * delta
@@ -19,4 +20,4 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("takeDamage"):
-		body.takeDamage()
+		body.takeDamage(dir)
